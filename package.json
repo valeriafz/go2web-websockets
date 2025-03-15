@@ -1,0 +1,12 @@
+{
+    "name": "go2web",
+    "version": "1.0.0",
+    "description": "CLI tool for web requests and searches",
+    "main": "index.js",
+    "bin": {
+      "go2web": "./index.js"
+    },
+    "dependencies": {
+      "node-html-parser": "^6.1.5"
+    }
+  }
