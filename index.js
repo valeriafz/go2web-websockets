@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { fetchUrl } = require("./fetcher");
 const { searchWeb } = require("./search");
 
