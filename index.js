@@ -1,8 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const readline = require('readline');
-const { parse: parseHtml } = require('node-html-parser');
-
 const args = process.argv.slice(2);
 const helpText = `
 Usage:
