@@ -1,3 +1,6 @@
+const { fetchUrl } = require("./fetcher");
+const { searchWeb } = require("./search");
+
 const args = process.argv.slice(2);
 const helpText = `
 Usage:
@@ -23,10 +26,10 @@ async function main() {
 
   switch (flag) {
     case '-u':
-      
+      fetchUrl(value)
       break;
     case '-s':
-      
+      searchWeb(value)
       break;
     default:
       console.error('Error: Unknown flag', flag);
