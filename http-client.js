@@ -1,6 +1,7 @@
 const net = require('net');
 const tls = require('tls');
 const { URL } = require('url');
+const { Cache } = require('./cache');
 
 class HttpClient {
   constructor() {
