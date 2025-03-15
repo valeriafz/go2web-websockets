@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const readline = require('readline');
 const { parse: parseHtml } = require('node-html-parser');
 

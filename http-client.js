@@ -4,10 +4,17 @@ const { URL } = require('url');
 
 class HttpClient {
   constructor() {
+    this.cache = new Cache();
     this.maxRedirects = 5;
   }
 
   async request(urlString, headers = {}) {
+    
+    const cachedResponse = this.cache.getCachedResponse(urlString);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+
     const defaultHeaders = {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
